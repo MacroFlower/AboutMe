@@ -30,7 +30,7 @@ nav li {
 
 main {
     /* background-color: rgb(234, 243, 243); */
-    background-image: url("/Codecademy/portfolio/bilder/flowers_background.png");
+    background-image: url("/bilder/flowers_background.png");
     background-size:cover;
     background-position: right;
 }
