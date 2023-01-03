@@ -1,0 +1,249 @@
+*{
+    width:100%;
+    margin:0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* nav */
+nav {
+    text-align: center;     
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+nav ul {
+    display: flex; 
+    list-style-type: none;
+}
+  
+nav li {
+    color: aliceblue;
+    font-weight: bold;
+    width: 100%;
+    top: 0; 
+    padding: 0.3em;
+    background-color: rgba(9, 41, 134, 0.9);       
+}
+
+/* main */
+
+main {
+    /* background-color: rgb(234, 243, 243); */
+    background-image: url("/Codecademy/portfolio/bilder/flowers_background.png");
+    background-size:cover;
+    background-position: right;
+}
+
+/* about me */
+
+.myPhoto {
+    height: auto;
+    width: 200px;
+    float: left;
+    border: solid 2px;
+    box-shadow: 10px 10px 5px rgb(5, 66, 123);
+    margin: 15px;
+}
+
+.aboutMe {
+    padding-top: 3%;
+    max-width: 80%;
+}
+
+.thumbnails{
+ margin-left: 5px;
+}
+
+.thumbnails img {
+    height: 140px;
+    width: auto; 
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+/* text-styling */
+span {
+    font-weight: bold;
+    color: rgb(12, 12, 158);
+}
+.aboutMe {
+   font-size: 20px;
+   color: rgb(6, 6, 45);
+}
+
+h2 {
+    display: block;
+    margin-top: 50px;
+    padding: 30px;
+    color: rgb(5, 5, 26);
+    text-align: center;
+}
+/* photos layout */
+
+.gridPhotos {
+    display: grid;
+    grid-template-columns: repeat(12, 3fr);
+    grid-template-rows: repeat(8, 4fr);
+    overflow:hidden;
+}
+.gridPhotoWinter, .gridPhotoSpring, .gridPhotoSummer, .gridPhotoAutumn {
+    display: flex;
+    height: 3fr;
+    width: 4fr;
+    overflow: hidden;
+    border-style: solid ;
+    border-radius: 10px;
+}
+
+/* winter */
+.gridPhotoWinter {
+    grid-area: 1 / 5 / 4 / 9;
+    z-index: 1; 
+}
+
+/* spring */
+.gridPhotoSpring {
+    grid-area: 3 / 8 / 6 / 12;
+    z-index: 2;
+    float: left;  
+ }
+/* summer */
+.gridPhotoSummer {
+    grid-area: 5 / 5 / 8 / 9;
+    z-index: 4;
+    
+ }
+/* autumn */
+.gridPhotoAutumn {
+    grid-area: 3 / 2 / 6 / 6;
+    z-index: 3;
+    float: right;
+ }
+
+/* .gridButton {
+    grid-area: 5 / 6 / 6 / 8;
+    background-color: rgb(221, 224, 238);
+    color: rgb(1, 1, 44);
+    border-radius: 70%;
+    z-index: 0;
+ } Changes too much on the photos placement on the page */
+
+ /*  Moving photos */
+
+ .thumbnails img:hover {
+    transform: scale(1.6);
+ }
+
+ .gridPhotoWinter:hover, .gridPhotoSpring:hover, .gridPhotoSummer:hover, .gridPhotoAutumn:hover {
+    /* mulig denne må endres, det kommer an på hvordan JS gjøres i forhold til endring av bildene */
+    z-index: 5; 
+ }
+
+/* skills */
+.skills {
+    text-align:start;     
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border: 2px solid rgba(9, 41, 134, 0.9);
+}
+
+.skills ul {
+    display: flex; 
+    list-style-type: none;
+}
+.skills li {
+    color: rgb(9, 20, 29);
+    font-weight: bold;
+    width: 100%;
+    top: 0; 
+    padding: 0.3em;
+    background-color: aliceblue;       
+}
+ /* footer */
+
+ footer {
+    background-color:rgba(9, 41, 134, 0.9);    ;
+    color: aliceblue;
+ }
+
+
+/* responsivness to different media sources */
+
+/* narrow screen */
+@media screen and (max-width: 1579px) {
+    .colidingPhoto {
+        display: none;
+    }
+}
+@media screen and (max-width: 1373px) {
+    .thumbnails img {
+        height: 100px;
+        padding: 3px;
+    }
+}
+/* tablets */
+
+@media screen and (max-width: 992px) {
+
+    .thumbnails {
+        margin-left: 5px;
+    }
+    
+    .thumbnails img {
+        height: 100px;
+    }
+  
+}  
+
+@media screen and (max-width: 827px) {
+    .thumbnails img {
+        height: 170px;
+        padding: 15px; 
+    }
+}
+
+@media screen and (max-width: 704px){
+    .thumbnails img {
+        height: 140px;
+        padding: 10px; 
+    }
+}
+/* mobiles */
+
+@media screen and (max-width: 571px) {
+    .thumbnails img {
+        height: 120px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 491px) {
+    .thumbnails img {
+        height: 100px;
+        padding: 3px;
+    }
+}
+@media screen and (max-width: 411px) {
+    .thumbnails img {
+        height: 140px;
+        padding: 10px;
+    }
+}
+
+/* the navbar for mobiles */
+
+@media screen and (max-width: 550px) {
+    /* nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    } */
+
+    nav ul :first-child, nav ul :nth-child(3){
+        display:none;
+    }
+}
