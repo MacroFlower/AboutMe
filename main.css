@@ -18,12 +18,24 @@ nav ul {
 }
   
 nav li {
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     width: 100%;
     top: 0; 
     padding: 0.3em;
     background-color: rgba(9, 41, 134, 0.9);       
+}
+nav li a {
+    color:aliceblue; 
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color: rgb(33, 255, 255);
+}
+
+nav li a:visited {
+    color: rgb(255, 93, 244);
 }
 
 /* main */
