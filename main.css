@@ -144,8 +144,9 @@ h2 {
 
  /*  Moving photos */
 
- .thumbnails img:hover {
+  .thumbnails img:hover {
     transform: scale(1.6);
+    transition: 1s;
  }
 
  .gridPhotoWinter:hover, .gridPhotoSpring:hover, .gridPhotoSummer:hover, .gridPhotoAutumn:hover {
