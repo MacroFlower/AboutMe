@@ -35,7 +35,7 @@ nav li a:hover {
 }
 
 nav li a:visited {
-    color: rgb(255, 93, 244);
+    color: hsl(300, 80%, 80%);
 }
 
 /* main */
