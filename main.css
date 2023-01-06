@@ -41,7 +41,7 @@ nav li a:visited {
 /* main */
 main {
     background-color: rgb(178, 206, 245);
-    background-image: url("../bilder/flowers_background_small.png");
+    background-image: url("./bilder/flowers_background_small.png");
     background-size:cover;
     background-position: right;
 }
@@ -186,7 +186,7 @@ h2 {
 /* big screen */
 @media screen and (min-width: 1000px){
     main{
-        background-image:url("../bilder/flowers_background.png");
+        background-image:url("./bilder/flowers_background.png");
     }
 }
 /* narrow screen */
