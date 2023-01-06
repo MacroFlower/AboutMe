@@ -1,56 +1,42 @@
- 
 //  Photoshow
 
-// Winter
+// Declaring
+ const winterPhotos = winter.getElementsByTagName('img')
+ let currentImageWinter=0;
 
- // Get a reference to the image container element
- const imageContainerWinter = document.getElementById('winter');
+ const springPhotos = spring.getElementsByTagName('img')
+ let currentImageSpring=0;
 
- // Get a reference to all of the images
- const images = winter.getElementsByTagName('img');
+ const summerPhotos = summer.getElementsByTagName('img')
+ let currentImageSummer=0;
 
- // Set a counter to keep track of the current image
- let currentImage = 0;
+ const autumnPhotos = autumn.getElementsByTagName('img')
+ let currentImageAutumn=0;
 
- // Add an onclick event to the image container element
- imageContainerWinter.onclick = function () {
-     // Hide the current image
-     images[currentImage].style.display = 'none';
+//  Function
 
-     // Increment the counter
-     currentImage = (currentImage + 1) % images.length;
+const photoshow = (images, currentImage) => {
+ 
+ images[currentImage].style.display = 'none';
+ currentImage = (currentImage + 1) % images.length;
+ images[currentImage].style.display = 'flex';
+ return currentImage;
+};
 
-     // Show the next image
-     images[currentImage].style.display = 'flex';
- };
+// calling (dr. feelgood)
 
- //   spring
- const imageContainerSpring = document.getElementById('spring');
- const imagesSpring = spring.getElementsByTagName('img');
- let currentImageSpring = 0;
+document.getElementById('winter').addEventListener("click", () => {
+currentImageWinter = photoshow(winterPhotos, currentImageWinter);
+});
 
- imageContainerSpring.onclick = function () {
-     imagesSpring[currentImageSpring].style.display = 'none';
-     currentImageSpring = (currentImageSpring + 1) % imagesSpring.length;
-     imagesSpring[currentImageSpring].style.display = 'flex';
- }
- // summer
- const imageContainerSummer = document.getElementById('summer');
- const imagesSummer = summer.getElementsByTagName('img');
- let currentImageSummer = 0;
+document.getElementById('spring').addEventListener("click", () => {
+currentImageSpring = photoshow(springPhotos, currentImageSpring);
+});
 
- imageContainerSummer.onclick = function () {
-     imagesSummer[currentImageSummer].style.display = 'none';
-     currentImageSummer = (currentImageSummer + 1) % imagesSummer.length;
-     imagesSummer[currentImageSummer].style.display = 'flex';
- }
- //   autumn
- const imageContainerAutumn = document.getElementById('autumn');
- const imagesAutumn = autumn.getElementsByTagName('img');
- let currentImageAutumn = 0;
+document.getElementById('summer').addEventListener("click", () => {
+currentImageSummer = photoshow(summerPhotos, currentImageSummer);
+});
 
- imageContainerAutumn.onclick = function () {
-     imagesAutumn[currentImageAutumn].style.display = 'none';
-     currentImageAutumn = (currentImageAutumn + 1) % imagesAutumn.length;
-     imagesAutumn[currentImageAutumn].style.display = 'flex';
- }
+document.getElementById('autumn').addEventListener("click", () => {
+currentImageAutumn = photoshow(autumnPhotos, currentImageAutumn);
+});
