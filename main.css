@@ -149,6 +149,10 @@ h2 {
     transition: 1s;
  }
 
+   #photoRotate:hover{
+       transform: rotate(0deg);
+       transition: transform 1.5s;
+   }
  .gridPhotoWinter:hover, .gridPhotoSpring:hover, .gridPhotoSummer:hover, .gridPhotoAutumn:hover {
     /* mulig denne må endres, det kommer an på hvordan JS gjøres i forhold til endring av bildene */
     z-index: 5; 
