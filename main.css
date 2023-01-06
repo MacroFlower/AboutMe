@@ -31,7 +31,7 @@ nav li a {
 }
 
 nav li a:hover {
-    color: rgb(33, 255, 255);
+    color: rgb(33, 203, 255);
 }
 
 nav li a:visited {
@@ -39,16 +39,14 @@ nav li a:visited {
 }
 
 /* main */
-
 main {
-    /* background-color: rgb(234, 243, 243); */
-    background-image: url("./bilder/flowers_background.png");
+    background-color: rgb(178, 206, 245);
+    background-image: url("../bilder/flowers_background_small.png");
     background-size:cover;
     background-position: right;
 }
 
 /* about me */
-
 .myPhoto {
     height: auto;
     width: 200px;
@@ -74,7 +72,6 @@ main {
     margin: 0 auto;
 }
 
-
 /* text-styling */
 span {
     font-weight: bold;
@@ -92,8 +89,8 @@ h2 {
     color: rgb(5, 5, 26);
     text-align: center;
 }
-/* photos layout */
 
+/* photos layout */
 .gridPhotos {
     display: grid;
     grid-template-columns: repeat(12, 3fr);
@@ -134,34 +131,25 @@ h2 {
     float: right;
  }
 
- .gridPhotoWinter:hover, .gridPhotoSpring:hover, .gridPhotoSummer:hover, .gridPhotoAutumn:hover {
-    z-index: 5; 
- }
-
-/* .gridButton {
-    grid-area: 5 / 6 / 6 / 8;
-    background-color: rgb(221, 224, 238);
-    color: rgb(1, 1, 44);
-    border-radius: 70%;
-    z-index: 0;
- } Changes too much on the photos placement on the page */
-
  /*  Moving photos */
-
-  .thumbnails img:hover {
+ .thumbnails img:hover {
     transform: scale(1.6);
     transition: 1s;
-   }
+ }
 
-   #photoRotate:hover{
-       transform: rotate(0deg);
-       transition: transform 1.5s;
-   }
+#photoRotate:hover{
+    transform: rotate(0deg);
+    transition: transform 1.5s;
+}
 
-   #photoRotate:active {
-        transform: rotate(360deg);
-   }
+#photoRotate:active {
+    transform: rotate(360deg);
+}
 
+ .gridPhotoWinter:hover, .gridPhotoSpring:hover, .gridPhotoSummer:hover, .gridPhotoAutumn:hover {
+    z-index: 5; 
+    transition: 0.3s;
+ }
 
 /* skills */
 .skills {
@@ -177,6 +165,7 @@ h2 {
     display: flex; 
     list-style-type: none;
 }
+
 .skills li {
     color: rgb(9, 20, 29);
     font-weight: bold;
@@ -186,7 +175,6 @@ h2 {
     background-color: aliceblue;       
 }
  /* footer */
-
  footer {
     background-color:rgba(9, 41, 134, 0.9);    ;
     color: aliceblue;
@@ -195,20 +183,27 @@ h2 {
 
 /* responsivness to different media sources */
 
+/* big screen */
+@media screen and (min-width: 1000px){
+    main{
+        background-image:url("../bilder/flowers_background.png");
+    }
+}
 /* narrow screen */
 @media screen and (max-width: 1579px) {
     .colidingPhoto {
         display: none;
     }
 }
+
 @media screen and (max-width: 1373px) {
     .thumbnails img {
         height: 100px;
         padding: 3px;
     }
 }
-/* tablets */
 
+/* tablets */
 @media screen and (max-width: 992px) {
 
     .thumbnails {
@@ -218,7 +213,6 @@ h2 {
     .thumbnails img {
         height: 100px;
     }
-  
 }  
 
 @media screen and (max-width: 827px) {
@@ -235,7 +229,6 @@ h2 {
     }
 }
 /* mobiles */
-
 @media screen and (max-width: 571px) {
     .thumbnails img {
         height: 120px;
@@ -257,14 +250,7 @@ h2 {
 }
 
 /* the navbar for mobiles */
-
 @media screen and (max-width: 550px) {
-    /* nav ul {
-        flex-direction: column;
-        width: 100%;
-        text-align: left;
-    } */
-
     nav ul :first-child, nav ul :nth-child(3){
         display:none;
     }
