@@ -151,12 +151,12 @@ h2 {
     transition: 1s;
  }
 
-#photoRotate:hover{
-    transform: rotate(0deg);
-    transition: transform 1.5s;
+#hedgehog:hover, #photoRotate:hover{
+    transform: rotate(5deg);
+    transition: transform ease-in-out 1.5s;
 }
 
-#photoRotate:active {
+#hedgehog:active, #photoRotate:active {
     transform: rotate(360deg);
 }
 
