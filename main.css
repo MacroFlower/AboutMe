@@ -72,6 +72,20 @@ main {
     margin: 0 auto;
 }
 
+button {
+    background-color: rgb(161, 25, 25);
+    border-radius: 30%;
+    width: 20%;
+    padding: 40px;
+    margin-left: 70%;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+button a {
+    color: aliceblue;
+}
+
 /* text-styling */
 span {
     font-weight: bold;
