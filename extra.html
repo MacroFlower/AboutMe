@@ -1,51 +1,47 @@
-// Photospinning, hedgehog on the other page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The other page</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
 
-// declaring:
+        </nav>
 
-let rotation = 0;
-let smallRotation = 0;
-let speed = 4;
-let animationId;
-let smallAnimationId;
-const hedgehog = document.getElementById('hedgehog');
-const hedgehogSmall = document.getElementById('hedgehogSmall');
+    </header>
+    <main>  
+        <h1>This is the other page! You found it!</h1>
+        <h4>Now get back to the main page, or spin the big hedgehog (can you make the heart point to the small one?)</h4>
+        
 
-// function:
+        <section>
+            <div class="hedgehogContainer">
+                <img 
+                class="extraPagePhotos" 
+                id="hedgehog" 
+                src="./bilder/hedgehog_heart.png" 
+                alt="hedgehog on an heart"> 
 
-  function rotate(element, speed) {
-  element.style.transform = `rotate(${rotation}deg)`;
-  rotation += speed;
-  if (rotation >= 360) {
-    rotation = 0;
-  }
-  animationId = requestAnimationFrame(() => rotate(element, speed));
-};
-
-function smallRotate(element, speed) {
-    element.style.transform = `rotate(${smallRotation}deg)`;
-    smallRotation += speed;
-    if (smallRotation >= 360) {
-        cancelAnimationFrame(smallAnimationId);
-        smallRotation = 0;
-    } else {
-        smallAnimationId = requestAnimationFrame(() => smallRotate(element, speed));
-    }
-}
-
-
-// calling:
-
-hedgehog.addEventListener("click", () => {
-    if (!animationId) {
-        rotate(hedgehog, 4);
-    } else {
-        cancelAnimationFrame(animationId);
-        animationId = 0;
-        if (rotation >= 225 && rotation <= 240) {
-            console.log('point(s)');
-            smallRotate(hedgehogSmall, 8);
-              rotation = 0;
-              smallRotation = 0;
-          }
-    }
-});
+                <img
+                class="hedgehogSmall"
+                id="hedgehogSmall"
+                src="./bilder/hedgehog_heart.png" 
+                alt="small hedgehog_heart">
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <button class="redButton"><a href="index.html">Back to main page</a></button>
+        <h3>Byebye!</h3>
+    </footer>
+    <script src="./js/extra.js"></script>
+  
+    
+</body>
+</html>
