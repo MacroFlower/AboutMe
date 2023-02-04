@@ -24,7 +24,7 @@ const hedgehogSmall = document.getElementById('hedgehogSmall');
 function smallRotate(element, speed) {
     element.style.transform = `rotate(${smallRotation}deg)`;
     smallRotation += speed;
-    if (smallRotation >= 360) {
+    if (smallRotation >= 361) {
         cancelAnimationFrame(smallAnimationId);
         smallRotation = 0;
     } else {
