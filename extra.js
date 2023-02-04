@@ -44,8 +44,6 @@ hedgehog.addEventListener("click", () => {
         if (rotation >= 225 && rotation <= 240) {
             console.log('point(s)');
             smallRotate(hedgehogSmall, 8);
-              rotation = 0;
-              smallRotation = 0;
           }
     }
 });
